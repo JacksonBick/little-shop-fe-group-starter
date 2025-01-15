@@ -1,54 +1,59 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- meta tags -->
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Shop</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- sidebar -->
+    <!-- Sidebar -->
     <aside>
-      <!-- header inside sidebar -->
+      <!-- Header inside Sidebar -->
       <header>
-        <!-- title & subtitle of website -->
+        <!-- Title & Subtitle of the Website -->
         <h1>Little Shop</h1>
         <h2>Admin Portal</h2>
       </header>
-      <!-- navigation bar to side -->
+      
+      <!-- Navigation Bar to the Side -->
       <nav>
-        <!-- button to nav to merchants -->
+        <!-- Button to Navigate to Merchants -->
         <button id="merchants-nav" class="active-nav">
           <h2>Merchants</h2>
         </button>
-        <!-- button to nav to items -->
+        
+        <!-- Button to Navigate to Items -->
         <button id="items-nav">
           <h2>Items</h2>
         </button>
       </nav>
     </aside>
 
-    <!-- main content area -->
+    <!-- Main Content Area -->
     <main>
       <section class="display-options">
-        <!-- heading showing current display view (merchants or items) -->
+        <!-- Heading Showing Current Display View -->
         <h3>Showing: <span id="showing-text">All Merchants</span></h3>
+        
+        <!-- Button to Add New Merchant or Item -->
         <button id="add-new-button" class="add-new-button" data-state="merchant">+ Add New</button>
       </section>
 
       <section id="add-new-options">
-        <!-- add new merchant form -->
+        <!-- Add New Merchant Form -->
         <form id="new-merchant-form" class="hidden">
           <label for="new-merchant-name">New Merchant Name</label>
           <input id="new-merchant-name" name="new-merchant-name" type="text">
           <button id="submit-merchant" class="submit">Submit</button>
         </form>
 
-        <!-- could be used for form submission success/failure -->
-        <p id="status-message" class="hidden"><!-- Status message here! --></p>
-        
-        <!-- add new item form -->
+        <!-- Status Message for Form Submission (Success/Failure) -->
+        <p id="status-message" class="hidden"></p>
+
+        <!-- Add New Item Form -->
         <form id="new-item-form" class="hidden">
           <label for="new-item-name">New Item Name</label>
           <input id="new-item-name" name="new-item-name" type="text">
@@ -60,23 +65,23 @@
         </form>
       </section>
 
-      <!-- merchants view section -->
+      <!-- Merchants View Section -->
       <section id="merchants-view" class="view">
-        <!-- Data will be displayed here -->
+        <!-- Merchants Data Will Be Displayed Here -->
       </section>
 
-      <!-- items view section -->
+      <!-- Items View Section (Hidden Initially) -->
       <section id="items-view" class="view hidden">
-        <!-- Data will be displayed here -->
+        <!-- Items Data Will Be Displayed Here -->
       </section>
 
-      <!-- single merchant view section -->
+      <!-- Single Merchant View Section (Hidden Initially) -->
       <section id="single-merchant-view" class="view hidden">
-        <!-- Data will be displayed here -->
+        <!-- Merchant Data Will Be Displayed Here -->
       </section>
     </main>
-    <!-- javascript module connection -->
+
+    <!-- JavaScript Module Connection -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
-

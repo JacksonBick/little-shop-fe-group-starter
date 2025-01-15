@@ -1,25 +1,32 @@
 /* GENERAL */
  /* -------------------------------------------- */
-* {
-  font-family: sans-serif;
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', sans-serif;
 }
 
-body, html {
-  background-color: gray;
-}
-
+/* BODY STYLES */
 body {
   display: flex;
-  margin: 0px;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
 /* -------------------------------------------- */
 /* SIDEBAR */
  /* -------------------------------------------- */
-aside {
-  width: 20%;
-  margin: none;
-}
+ aside {
+  width: 250px;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+ }
 
 header {
   text-align: center;
@@ -46,58 +53,86 @@ h3 {
 nav {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 }
 
 button {
   cursor:pointer;
+  border-radius: 5px;
 }
 
 nav > button {
+  background-color: transparent;
   border: none;
-  margin-bottom: 20px;
-  background-color: gray;
-  width: 65%;
-  text-align: center;
-  border-radius: 10px 0px 0px 10px;
-  padding: 20px;
+  color: white;
+  padding: 15px 20px;
+  text-align: left;
+  width: 100%;
+}
+
+nav > button:hover {
+  background-color: #0056b3;
 }
 
 .active-nav {
-  background-color: white;
+    background-color: #007bff;
 }
 
 /* -------------------------------------------- */
 /* MAIN */
  /* -------------------------------------------- */
-main {
+ main {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.display-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-new-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-new-button:hover {
+  background-color: #0056b3;
+}
+
+/* FORMS */
+form input,
+form button {
   padding: 10px;
-  width: 80%;
-  background-color: white;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
-form {
-  display: flex;
+
+/* VIEWS */
+#merchants-view,
+#items-view,
+#single-merchant-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-#merchants-view {
-  background-color: lightblue;
-  display: flex;             
-  padding: 5px; 
-  flex-direction: row; 
-  flex-wrap: wrap; 
-  gap: 20px;
-  align-content: center;  
-}
-
-.item {
-  display: flex;
-  background-color: lightgray;
-  margin: 10px;
-  padding: 5px;
+.view .card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
   width: 30%;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
 }
 
 .merchant {
@@ -112,7 +147,8 @@ form {
   text-align: center;
   padding: 10px;
 }
-  .merchant-view-items-button {
+
+.merchant-view-items-button {
   padding: 5px;
   margin-top: auto;
   margin-right: 10px;
@@ -121,11 +157,6 @@ form {
 
 .merchant-name {
   padding: 0px, 5px, 0px, 5px;
-}
-
-.display-options {
-  display: flex;
-  align-items: center;
 }
 
 .display-options > button {
