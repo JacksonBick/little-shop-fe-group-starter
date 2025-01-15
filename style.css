@@ -51,6 +51,7 @@ nav > button {
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
+  cursor: pointer;
 }
 
 .active-nav {
@@ -126,5 +127,3 @@ form {
 .hidden {
   display: none;
 } 
-  
-co
