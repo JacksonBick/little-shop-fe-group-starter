@@ -16,7 +16,7 @@ body {
 /* SIDEBAR */
 
 aside {
-  width: 25%;
+  width: 20%;
   margin: none;
 }
 
@@ -70,6 +70,14 @@ form {
   display: flex;
 }
 
+.merchant-container {
+  display: flex;
+  flex-wrap: wrap;  /* Allow merchants to wrap onto new rows */
+  justify-content: space-between; /* Evenly space merchants across rows */
+  gap: 20px; /* Add consistent gap between merchants */
+  margin-top: 20px;
+}
+
 .item,
 .merchant {
   display: flex;
@@ -85,8 +93,11 @@ form {
 }
 
 .merchant {
-  width: 98%;
+  border-radius: 5px;
+  width: 30%;
+  padding: 15px;
   flex-direction: row;
+  box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
 }
@@ -99,7 +110,8 @@ form {
 
 .merchant-name {
   padding-left: 10px;
-  margin: 0px;
+  margin: 10px;
+  text-align: center;
 }
 
 .display-options {
