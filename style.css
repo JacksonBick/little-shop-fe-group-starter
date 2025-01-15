@@ -38,10 +38,19 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  text-align: center;
+  /* margin: 4px; */
+}
+
 nav {
   display: flex;
   flex-direction: column;
   align-items: end;
+}
+
+button {
+  cursor:pointer;
 }
 
 nav > button {
@@ -52,7 +61,6 @@ nav > button {
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
-  cursor: pointer;
 }
 
 .active-nav {
@@ -78,7 +86,8 @@ form {
   padding: 5px; 
   flex-direction: row; 
   flex-wrap: wrap; 
-  gap: 20px;     
+  gap: 20px;
+  align-content: center;  
 }
 
 .item {
@@ -95,22 +104,23 @@ form {
   display: flex;
   background-color: teal;
   width: 23%;
-  flex-direction: row;
-  flex-wrap: wrap;  /* Allow merchants to wrap onto new rows */
-  gap: 20px; /* Add consistent gap between merchants */
-  margin-top: 20px;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  border-radius: 5px;
+  align-items: center;
+  align-content: justify;
+  text-align: center;
+  padding: 10px;
 }
-
-.merchant-view-items-button {
+  .merchant-view-items-button {
   padding: 5px;
+  margin-top: auto;
   margin-right: 10px;
-  cursor: pointer;
+  align-self: center;
 }
 
 .merchant-name {
-  padding-left: 10px;
-  margin: 10px;
-  text-align: center;
+  padding: 0px, 5px, 0px, 5px;
 }
 
 .display-options {
@@ -120,7 +130,6 @@ form {
 
 .display-options > button {
   margin-left: 15px;
-  cursor: pointer;
 }
 
 .merchant-name-in-item {
