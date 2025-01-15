@@ -1,5 +1,5 @@
 /* GENERAL */
- 
+ /* -------------------------------------------- */
 * {
   font-family: sans-serif;
 }
@@ -13,8 +13,9 @@ body {
   margin: 0px;
 }
 
+/* -------------------------------------------- */
 /* SIDEBAR */
-
+ /* -------------------------------------------- */
 aside {
   width: 20%;
   margin: none;
@@ -58,11 +59,12 @@ nav > button {
   background-color: white;
 }
 
+/* -------------------------------------------- */
 /* MAIN */
-
+ /* -------------------------------------------- */
 main {
   padding: 10px;
-  width: 75%;
+  width: 80%;
   background-color: white;
 }
 
@@ -70,39 +72,36 @@ form {
   display: flex;
 }
 
-.merchant-container {
-  display: flex;
-  flex-wrap: wrap;  /* Allow merchants to wrap onto new rows */
-  justify-content: space-between; /* Evenly space merchants across rows */
-  gap: 20px; /* Add consistent gap between merchants */
-  margin-top: 20px;
+#merchants-view {
+  background-color: lightblue;
+  display: flex;             
+  padding: 5px; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  gap: 20px;     
 }
 
-.item,
-.merchant {
+.item {
   display: flex;
   background-color: lightgray;
   margin: 10px;
   padding: 5px;
-}
-
-.item {
   width: 30%;
   flex-direction: column;
   justify-content: center;
 }
 
 .merchant {
-  border-radius: 5px;
-  width: 30%;
-  padding: 15px;
+  display: flex;
+  background-color: teal;
+  width: 23%;
   flex-direction: row;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;  /* Allow merchants to wrap onto new rows */
+  gap: 20px; /* Add consistent gap between merchants */
+  margin-top: 20px;
 }
 
-.view-items-button {
+.merchant-view-items-button {
   padding: 5px;
   margin-right: 10px;
   cursor: pointer;
@@ -135,9 +134,9 @@ form {
 .fail {
   color: red;
 }
-
+ /* -------------------------------------------- */
+ /* -------------------------------------------- */
 /* HIDDEN ELEMENTS */
-
 .hidden {
   display: none;
 } 
